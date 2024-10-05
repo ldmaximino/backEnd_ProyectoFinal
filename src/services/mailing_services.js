@@ -26,25 +26,31 @@ const createMessageInactiveUser = (first_name,msgLastConnection) => {
   return `<p>Hola ${first_name}! Tu cuenta ha sido desactivada por haber pasado más de ${msgLastConnection} desde tu última conexión.</p>`
 };
 
+const createMessageProductDeleted = (first_name,msgProdDeleted) => {
+  return `<p>Hola ${first_name}! El producto <b>${msgProdDeleted}</b> ha sido eliminado.</p>`
+};
+
 /**
  * @param {*} user
  * @param {*} service register | resetPass
  * @param {*} token
  * @returns
  */
-export const sendEMailToUser = async(user, service, token = null, msgLastConnection = '') => {
+export const sendEMailToUser = async(user, service, token = null, msgLastConnection = '', msgProdDeleted ='') => {
   try {
     const { first_name, email } = user;
     let msg = '';
     service === 'register' ? msg = createMessageRegister(first_name) :
     service === 'resetPass' ? msg = createMessageResetPass(first_name) :
     service === 'inactive' ? msg = createMessageInactiveUser(first_name, msgLastConnection) :
+    service === 'product_deleted' ? msg = createMessageProductDeleted(first_name, msgProdDeleted) :
     msg = "";
     
     let subj = ''
     service === 'register' ? subj = "Bienvenido/a" : 
     service === 'resetPass' ? subj = "Reestablecer contraseña" : 
     service === 'inactive' ? subj = "Usuario deshabilitado" :
+    service === 'product_deleted' ? subj = "Producto Eliminado" :
     subj = "";
 
     const gmailOptions = {

@@ -1,4 +1,5 @@
 //Local imports
+import { sendEMailToUser } from "../services/mailing_services.js";
 import { httpResponse } from "../utils/httpResponse.js";
 
 export default class Controllers {
@@ -64,9 +65,11 @@ export default class Controllers {
   delete = async (req, res, next) => {
     try {
       const id = req.params.pid;
+      const firstname = req.user.first_name;
       //If the user role is 'premium' and the email to the 'owner' does not correspond to 'premium', you cannot delete the product
       if (req.user.role === "premium") {
         const product = await this.service.getById(id);
+        if(!product) return httpResponse.Not_Found(res, product);
         if (req.user.email !== product.owner)
           return httpResponse.Forbidden(
             res,
@@ -75,8 +78,14 @@ export default class Controllers {
       }
       //
       const data = await this.service.delete(id);
-      if (!data) return httpResponse.Not_Found(res, data);
-      else return httpResponse.Deleted(res, data);
+      if (!data) {
+        return httpResponse.Not_Found(res, data);
+      } else {
+        const user = { first_name: firstname, email: data.owner };
+        const msgProdDeleted = data.title;
+        await sendEMailToUser(user,'product_deleted', null , '', msgProdDeleted);
+        return httpResponse.Deleted(res, data);
+      }
     } catch (error) {
       next(error);
     }
