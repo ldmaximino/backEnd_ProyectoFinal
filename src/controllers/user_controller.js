@@ -37,7 +37,7 @@ export default class UserController extends Controllers {
       const token = userService.generateToken(user);
       res.cookie("token", token, { httpOnly: true });
       if (req.headers["user-agent"].slice(0, 7) === "Postman" || req.headers["x-requested-from"] === "swagger") {
-        return httpResponse.Forbidden(res, user);
+        return httpResponse.Ok(res, user);
       } else return res.redirect("/products");
     } catch (error) {
       next(error);
