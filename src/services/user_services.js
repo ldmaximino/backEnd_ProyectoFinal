@@ -106,6 +106,7 @@ export default class UserService extends Services {
         if(!userExist.active) return null;
       }
       await this.updateLastConnection(userExist._id);
+      console.log('login succesful');
       return userExist;
     } catch (error) {
       throw new Error(error);

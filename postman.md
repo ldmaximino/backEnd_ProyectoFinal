@@ -1,6 +1,6 @@
 ADD PRODUCTS
 ------------
-POST http://localhost:5002/api/products - name: Add Product Code IPad109
+POST http://entregafinal-leamaximino.onrender.com/api/products - name: Add Product Code IPad109
 body:
         {
             "title": "Apple iPad Air",
@@ -13,7 +13,7 @@ body:
             "thumbnails": ["IPad109_01.jpg","IPad109_02.jpg"]
         }
 
-POST http://localhost:5002/api/products - name: Add Product Code SGXS9
+POST http://entregafinal-leamaximino.onrender.com/api/products - name: Add Product Code SGXS9
 body:
         {
             "title": "Samsung Galaxy Tab S9",
@@ -26,7 +26,7 @@ body:
             "thumbnails": ["SGXS9_01.jpg","SGXS9_02.jpg"]
         }
 
-POST http://localhost:5002/api/products - name: Add Product Code LNV4
+POST http://entregafinal-leamaximino.onrender.com/api/products - name: Add Product Code LNV4
 body:
         {
             "title": "Lenovo Tab M10 Plus",
@@ -39,7 +39,7 @@ body:
             "thumbnails": ["LNV4_01.jpg","LNV4_02.jpg"]
         }
 
-POST http://localhost:5002/api/products - name: Add Product Code CSGA235G
+POST http://entregafinal-leamaximino.onrender.com/api/products - name: Add Product Code CSGA235G
 body:
         {
             "title": "Samsung Galaxy A23 5G 128GB",
@@ -52,7 +52,7 @@ body:
             "thumbnails": ["CSGA235G_01.jpg","CSGA235G_02.jpg"]
         }
 
-POST http://localhost:5002/api/products - name: Add Product Code CSGA34
+POST http://entregafinal-leamaximino.onrender.com/api/products - name: Add Product Code CSGA34
 body:
         {
             "title": "Samsung Galaxy A34 128gb",
@@ -65,7 +65,7 @@ body:
             "thumbnails": ["CSGA34_01.jpg","CSGA34_02.jpg"]
         }
 
-POST http://localhost:5002/api/products - name: Add Product Code CXMi11
+POST http://entregafinal-leamaximino.onrender.com/api/products - name: Add Product Code CXMi11
 body:
         {
             "title": "Xiaomi Mi 11 Lite 5G",
@@ -78,7 +78,7 @@ body:
             "thumbnails": ["CXMi11_01.jpg","CXMi11_02.jpg"]
         }
 
-POST http://localhost:5002/api/products - name: Add Product Code HWH5602
+POST http://entregafinal-leamaximino.onrender.com/api/products - name: Add Product Code HWH5602
 body:
         {
             "title": "Heladera Whirlpool WRM5602 c/Freezer 462L",
@@ -91,7 +91,7 @@ body:
             "thumbnails": ["HWH5602_01.jpg","HWH5602_02.jpg"]
         }
 
-POST http://localhost:5002/api/products - name: Add Product Code HD320F
+POST http://entregafinal-leamaximino.onrender.com/api/products - name: Add Product Code HD320F
 body:
         {
             "title": "Heladera Drean Freezer 314 Lts",
@@ -104,7 +104,7 @@ body:
             "thumbnails": ["HD320F_01.jpg","HD320F_02.jpg"]
         }
 
-POST http://localhost:5002/api/products - name: Add Product Code LAGad320
+POST http://entregafinal-leamaximino.onrender.com/api/products - name: Add Product Code LAGad320
 body:
         {
             "title": "Lámpara Escritorio Gadnic Articulada",
@@ -117,7 +117,7 @@ body:
             "thumbnails": ["LAGad320_01.jpg","LAGad320_02.jpg"]
         }
 
-POST http://localhost:5002/api/products - name: Add Product Code LAEco
+POST http://entregafinal-leamaximino.onrender.com/api/products - name: Add Product Code LAEco
 body:
         {
             "title": "Lámpara de Pie Ecocuero",
@@ -132,7 +132,7 @@ body:
 
 EDIT PRODUCT
 ------------
-PUT http://localhost:5002/api/products/ID - name: Edit Product ID
+PUT http://entregafinal-leamaximino.onrender.com/api/products/ID - name: Edit Product ID
 body:
         {
                 "title": "Samsung Galaxy A23 5G 128GB",
@@ -151,27 +151,27 @@ body:
 
 GET PRODUCTS
 ------------
-GET http://localhost:5002/api/products?page=1&limit=2&sort=desc&category=Iluminacion - name: GET All Products FilterBy Category -
-GET http://localhost:5002/api/products?page=1&limit=3&sort=desc&stock=100 - name: GET All Products FilterBy Stock Greater Than X -
-GET http://localhost:5002/api/products?page=1&limit=2&sort=desc&stock=10&category=Tablet - name: GET All Products FilterBy Category AND Stock Greater Than X
-GET http://localhost:5002/api/products/ID - name: GET One Product
+GET http://entregafinal-leamaximino.onrender.com/api/products?page=1&limit=2&sort=desc&category=Iluminacion - name: GET All Products FilterBy Category -
+GET http://entregafinal-leamaximino.onrender.com/api/products?page=1&limit=3&sort=desc&stock=100 - name: GET All Products FilterBy Stock Greater Than X -
+GET http://entregafinal-leamaximino.onrender.com/api/products?page=1&limit=2&sort=desc&stock=10&category=Tablet - name: GET All Products FilterBy Category AND Stock Greater Than X
+GET http://entregafinal-leamaximino.onrender.com/api/products/ID - name: GET One Product
 
 DELETE PRODUCT
 --------------
-DELETE http://localhost:5002/api/products/ID - name: Delete Product ID
+DELETE http://entregafinal-leamaximino.onrender.com/api/products/ID - name: Delete Product ID
 
 
 ADD NEW CART
 ------------
-POST http://localhost:5002/api/carts - name: Add New Cart
+POST http://entregafinal-leamaximino.onrender.com/api/carts - name: Add New Cart
 
 ADD PRODUCT TO CART
 -------------------
-POST http://localhost:5002/api/carts/product/IDPRODUCT - name: Add Product to Cart
+POST http://entregafinal-leamaximino.onrender.com/api/carts/product/IDPRODUCT - name: Add Product to Cart
 
 PUT ARRAY PRODUCTS TO CART
 --------------------------
-PUT http://localhost:5002/api/carts
+PUT http://entregafinal-leamaximino.onrender.com/api/carts
 body:
         [
             {
@@ -186,7 +186,7 @@ body:
 
 PUT PRODUCT QUANTITY
 --------------------
-PUT http://localhost:5002/api/carts/product/ID - name: PUT Update Product Quantity
+PUT http://entregafinal-leamaximino.onrender.com/api/carts/product/ID - name: PUT Update Product Quantity
 body: 
         {
             "quantity":3
@@ -194,37 +194,37 @@ body:
 
 GET CARTS
 ---------
-GET http://localhost:5002/api/carts/cart - name: GET One Cart - This method includes 'mongoose-populate'
-GET http://localhost:5002/api/carts - name: GET All Carts - This method includes 'mongoose-populate'
+GET http://entregafinal-leamaximino.onrender.com/api/carts/cart - name: GET One Cart - This method includes 'mongoose-populate'
+GET http://entregafinal-leamaximino.onrender.com/api/carts - name: GET All Carts - This method includes 'mongoose-populate'
 
 DELETE PRODUCTS FROM CART
 -------------------------
-DELETE http://localhost:5002/api/carts/ID/product/ID - name: DELETE Product from Cart
-DELETE http://localhost:5002/api/carts/ID - name: DELETE All Products from Cart
+DELETE http://entregafinal-leamaximino.onrender.com/api/carts/ID/product/ID - name: DELETE Product from Cart
+DELETE http://entregafinal-leamaximino.onrender.com/api/carts/ID - name: DELETE All Products from Cart
 
 CURRENT USER USING REPOSITORY Y DTO
 -----------------------------------
-http://localhost:5002/api/sessions/current returns the current user
+http://entregafinal-leamaximino.onrender.com/api/sessions/current returns the current user
 
 USERS
 -----
-POST http://localhost:5002/users/register (en Headers agregar orig(key) postman(value) ) - name POST Create User
-POST http://localhost:5002/users/login (en Headers agregar orig(key) postman(value) ) - name POST Login User
-GET http://localhost:5002/users - name: GET All Users
-GET http://localhost:5002/users/ID - name: GET One User
-DELETE http://localhost:5002/users/inactive - name: DELETE Users Inactive
+POST http://entregafinal-leamaximino.onrender.com/users/register (en Headers agregar orig(key) postman(value) ) - name POST Create User
+POST http://entregafinal-leamaximino.onrender.com/users/login (en Headers agregar orig(key) postman(value) ) - name POST Login User
+GET http://entregafinal-leamaximino.onrender.com/users - name: GET All Users
+GET http://entregafinal-leamaximino.onrender.com/users/ID - name: GET One User
+DELETE http://entregafinal-leamaximino.onrender.com/users/inactive - name: DELETE Users Inactive
 
 CREATE TICKET
 -------------
-POST http://localhost:5002/api/tickets/purchase - name POST Create Ticket
+POST http://entregafinal-leamaximino.onrender.com/api/tickets/purchase - name POST Create Ticket
 
 MOCKING PRODUCTS
 ----------------
-http://localhost:5002/api/products/mockingproducts?cant=100 - name POST Create Mocking Products
+http://entregafinal-leamaximino.onrender.com/api/products/mockingproducts?cant=100 - name POST Create Mocking Products
 
 CUSTOM ERROR 
 ------------
-POST http://localhost:5002/api/products - name: Add Product Code JJ2020 (Generar error without Title and Price)
+POST http://entregafinal-leamaximino.onrender.com/api/products - name: Add Product Code JJ2020 (Generar error without Title and Price)
 body:
         {
             "description": "Heladera Bambi 350 Lts Color Blanco",
@@ -237,15 +237,15 @@ body:
 
 LOGGER TEST
 -----------
-GET http://localhost:5002/loggertest 
+GET http://entregafinal-leamaximino.onrender.com/loggertest 
 
 RESET PASSWORD BY EMAIL
 -----------------------
-POST http://localhost:5002/users/reset-pass
+POST http://entregafinal-leamaximino.onrender.com/users/reset-pass
 
 UPDATE PASSWORD
 ---------------
-PUT http://localhost:5002/users/update-pass
+PUT http://entregafinal-leamaximino.onrender.com/users/update-pass
 body:
         {
             "password":"1234"
@@ -253,15 +253,15 @@ body:
 
 CHANGE USER ROLE
 ----------------
-PUT http://localhost:5002/users/premium
+PUT http://entregafinal-leamaximino.onrender.com/users/premium
 
 #Tareas extras a realizar:
-        #ejecutar la request http://localhost:5002/users/reset-pass que envía el correo para habilitar el cambio de password.
-        #ejecutar la request http://localhost:5002/users/update-pass (body "password": "1234") para que se modifique la password.
+        #ejecutar la request http://entregafinal-leamaximino.onrender.com/users/reset-pass que envía el correo para habilitar el cambio de password.
+        #ejecutar la request http://entregafinal-leamaximino.onrender.com/users/update-pass (body "password": "1234") para que se modifique la password.
         #Al intentar agregar un nuevo producto a la colección products, solo permite hacerlo si el usuario tiene role = admin o premium
         #El usuario con rol 'admin' puede modificar o borrar cualquier producto
         #El usuario con rol 'premium' solo puede modificar o borrar los productos que tienen su email en el campo owner, es decir los productos que le pertenecen.
         #Un usuario con rol 'premium' no puede agregar al carrito un producto que le pertenece.
-        #Al llamar al end-point http://localhost:5002/users/premium, si el usuario tiene rol premium se cambia a rol user y viceversa. Si el usuario tiene rol 'admin' impide que pueda realizar el cambio.
+        #Al llamar al end-point http://entregafinal-leamaximino.onrender.com/users/premium, si el usuario tiene rol premium se cambia a rol user y viceversa. Si el usuario tiene rol 'admin' impide que pueda realizar el cambio.
         
 
